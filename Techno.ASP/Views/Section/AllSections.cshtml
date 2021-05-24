@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Techno.ASP.Models.SectionModel>
+
+@{
+    ViewData["Title"] = "AllSections";
+}
+
+<h1>AllSections</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    | <a asp-controller="Section" asp-action="Update" asp-route-id="@item.Id">Modifier</a> |
+                    @*<a asp-controller="Skill" asp-action="Detail" asp-route-id="@item.Id">Detail</a> |*@
+                    <a asp-controller="Section" asp-action="Delete" asp-route-id="@item.Id" class="delete-link">Supprimer</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts{
+    <script>
+        $(".delete-link").on("click", e => {
+            let ok = confirm("Etes-vous sûr de vouloir supprimer cette filière ?");
+            if (!ok) {
+                e.preventDefault();
+            }
+        });
+    </script>
+}
+
