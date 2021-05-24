@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Techno.ASP.Models
 {
-    public class UserModel
+    public class UserModel 
     {
         public int Id { get; set; }
         

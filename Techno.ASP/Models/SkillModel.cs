@@ -18,7 +18,7 @@ namespace Techno.ASP.Models
         [MaxLength(1000)]
         public string Description { get; set; }
 
-        //public virtual IEnumerable<ProfileModel> Profiles { get; set; }
+        //public virtual IEnumerable<ProfileModel> Profiles { get; set; } 
 
 
     }

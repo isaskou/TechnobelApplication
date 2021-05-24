@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Techno.ASP.Models.FormsModel
 {
-    public class ContactForm
+    public class ContactForm 
     {
         [Required(ErrorMessage ="Ce champ est requis")]
         [MaxLength(255, ErrorMessage ="Le champ doit faire maximum 255 caractères")]

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Techno.ASP.Models.FormsModel
 {
-    public class SectionForm
+    public class SectionForm 
     {
         public int Id { get; set; }
         

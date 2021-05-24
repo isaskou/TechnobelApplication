@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Techno.ASP.Models
 {
-    public class ProfileModel
+    public class ProfileModel 
     {
         public int Id { get; set; }
         public byte[] ImageFile { get; set; }

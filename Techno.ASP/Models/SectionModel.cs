@@ -19,7 +19,7 @@ namespace Techno.ASP.Models
         public string Description { get; set; }
 
 
-        //public virtual IEnumerable<ProfileModel> Profiles { get; set; }
+        //public virtual IEnumerable<ProfileModel> Profiles { get; set; } 
 
 
     }

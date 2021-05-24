@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Techno.ASP.Models.FormsModel
 {
-    public class SkillForm
+    public class SkillForm 
     {
         public int Id { get; set; }
 
