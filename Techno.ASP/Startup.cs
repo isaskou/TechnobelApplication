@@ -30,7 +30,7 @@ namespace Techno.ASP
 
             services.AddScoped<DataContext>();
 
-            services.AddScoped<SkillService>();
+            services.AddScoped<SkillService>(); 
 
         }
 
