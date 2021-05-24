@@ -8,7 +8,7 @@ using Techno.ASP.Models;
 using Techno.ASP.Models.FormsModel;
 using Techno.ASP.Services;
 
-namespace Techno.ASP.Controllers
+namespace Techno.ASP.Controllers 
 {
     public class SkillController : Controller
     {
