@@ -76,7 +76,7 @@ namespace Techno.ASP.Services
             }
         }
 
-        public void Update(SkillForm form)
+        public void Update(SkillForm form) 
         {
             Skill s = _dc.Skills.Find(form.Id);
             s.Name = form.Name;
