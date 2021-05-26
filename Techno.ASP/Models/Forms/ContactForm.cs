@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Techno.ASP.Models.FormsModel
+namespace Techno.ASP.Models.Forms
 {
     public class ContactForm 
     {
@@ -12,6 +12,7 @@ namespace Techno.ASP.Models.FormsModel
         [MaxLength(255, ErrorMessage ="Le champ doit faire maximum 255 caractères")]
         [EmailAddress]
         public string Email { get; set; }
+
 
         [Required(ErrorMessage ="Ce champ est requis")]
         [MinLength(2, ErrorMessage ="Vous avez certainement plus de choses à dire... ")]

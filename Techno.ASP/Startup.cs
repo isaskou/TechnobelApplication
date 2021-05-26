@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Techno.DAL;
 using Techno.ASP.Services;
+using MailKit.Net.Smtp;
+using System.Net.Http;
 
 namespace Techno.ASP
 {
@@ -29,6 +31,10 @@ namespace Techno.ASP
             services.AddControllersWithViews();
 
             services.AddScoped<DataContext>();
+
+            services.AddScoped<HttpClient>();
+            services.AddScoped<SmtpClient>();
+            services.AddScoped<Mailer>();
 
             services.AddScoped<SkillService>();
             services.AddScoped<SectionService>();

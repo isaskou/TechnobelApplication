@@ -1,0 +1,28 @@
+﻿@model Techno.ASP.Models.Forms.ContactForm
+
+<div class="container-fluid">
+    <h1>Contact</h1>
+    <h3>Veuillez compléter le formulaire</h3>
+
+    <form method="post">
+        <div class="form-group">
+            <label>Email : </label>
+            <input type="email" placeholder="nom@mail.be" asp-for="Email" />
+            <span class="text-danger" asp-validation-for="Email"></span>
+        </div>
+        <div class="form-group">
+            <label>Message : </label>
+            <textarea class="form-control" placeholder="Votre message" asp-for="Message"></textarea>
+            <span class="text-danger" asp-validation-for="Message"></span>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-info" type="submit">Envoyer</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
