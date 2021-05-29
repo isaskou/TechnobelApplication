@@ -13,6 +13,9 @@ using Techno.DAL;
 using Techno.ASP.Services;
 using MailKit.Net.Smtp;
 using System.Net.Http;
+using Techno.ASP.Models;
+using Techno.ASP.Models.Forms;
+using Techno.ASP.Models.FormsModel;
 
 namespace Techno.ASP
 {
@@ -36,8 +39,13 @@ namespace Techno.ASP
             services.AddScoped<SmtpClient>();
             services.AddScoped<Mailer>();
 
-            services.AddScoped<SkillService>();
-            services.AddScoped<SectionService>();
+            services.AddScoped<IServices<UserModel, UserForm>, UserService>();
+            services.AddScoped<IServices<SkillModel, SkillForm>, SkillService>();
+            services.AddScoped<IServices<SectionModel, SectionForm>, SectionService>();
+            services.AddScoped<IServices<ProfileModel, ProfileForm>, ProfileService>();
+
+
+            services.AddScoped<ProfileService>();
 
         }
 
@@ -65,7 +73,7 @@ namespace Techno.ASP
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=AllProfiles}/{id?}");
             });
         }
     }
