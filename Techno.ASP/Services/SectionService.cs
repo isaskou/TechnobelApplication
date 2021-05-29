@@ -9,7 +9,7 @@ using Techno.DAL.Entities;
 
 namespace Techno.ASP.Services
 {
-    public class SectionService
+    public class SectionService : IServices<SectionModel, SectionForm>
     {
         private readonly DataContext _dc;
 
@@ -70,7 +70,7 @@ namespace Techno.ASP.Services
             _dc.SaveChanges();
         }
 
-        internal bool Delete(int id)
+        public bool Delete(int id)
         {
             Section toDelete = _dc.Sections.Find(id);
 

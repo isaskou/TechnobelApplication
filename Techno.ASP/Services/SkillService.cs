@@ -9,7 +9,7 @@ using Techno.DAL.Entities;
 
 namespace Techno.ASP.Services
 {
-    public class SkillService
+    public class SkillService : IServices<SkillModel, SkillForm>
     {
         private readonly DataContext _dc;
 
