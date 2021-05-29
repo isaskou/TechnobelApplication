@@ -12,12 +12,13 @@ namespace Techno.ASP.Controllers
 {
     public class SkillController : Controller
     {
-        private readonly SkillService _Service;
+        private readonly IServices<SkillModel, SkillForm> _Service;
 
-        public SkillController(SkillService service)
+        public SkillController(IServices<SkillModel, SkillForm> service)
         {
             _Service = service;
         }
+
 
         // GET: SkillController
         public IActionResult AllSkills()

@@ -34,7 +34,7 @@ namespace Techno.ASP.Controllers
         }
 
         [HttpPost]
-        public IActionResult Contact(ContactForm form)
+        public IActionResult Contact([FromForm]ContactForm form)
         {
             if (ModelState.IsValid)
             {

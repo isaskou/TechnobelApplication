@@ -11,9 +11,9 @@ namespace Techno.ASP.Controllers
 {
     public class SectionController : Controller
     {
-        private readonly SectionService _service;
+        private readonly IServices<SectionModel, SectionForm> _service;
 
-        public SectionController(SectionService service)
+        public SectionController(IServices<SectionModel, SectionForm> service)
         {
             _service = service;
         }
