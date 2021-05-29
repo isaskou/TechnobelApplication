@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Techno.ASP.Models.ProfileModel>
+
+@{
+    ViewData["Title"] = "AllProfiles";
+}
+
+<h1>AllProfiles</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SectionName)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.ImageFile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageMimeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkedIn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hobbies)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Studies)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfessionalExperience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsPublished)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SectionId)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SectionName)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ImageFile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImageMimeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkedIn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hobbies)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Studies)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfessionalExperience)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPublished)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SectionId)
+            </td>*@
+        <td>
+            | <a asp-controller="Profile" asp-action="Update" asp-route-id="@item.Id">Modifier</a> |
+            @*<a asp-controller="Skill" asp-action="Detail" asp-route-id="@item.Id">Detail</a> |*@
+            <a asp-controller="Profile" asp-action="Delete" asp-route-id="@item.Id" class="delete-link">Supprimer</a>
+        </td>
+        </tr>
+}
+    </tbody>
+</table>
